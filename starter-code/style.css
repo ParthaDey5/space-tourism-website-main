@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+
+@layer base {
+  @font-face {
+    font-family: "Barlow";
+    src: url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap");
+    font-weight: 300; /* Regular weight */
+  }
+
+  @font-face {
+    font-family: "Barlow Condensed";
+    src: url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap");
+    font-weight: 300; /* Regular weight */
+  }
+
+  @font-face {
+    font-family: "Bellefair";
+    src: url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+  }
+}
+
+
+@media screen and (min-resolution: 2dppx), screen and (-webkit-min-device-pixel-ratio: 2) {
+  .high-dpi-element {
+    font-size: 1.2rem; /* Adjust typography for better readability */
+  }
+}
+
+
+
+@layer components {
+  .font-Barlow {
+    font-family: "Barlow", sans-serif;
+  }
+  
+  .font-Barlow_Condensed {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+  }
+
+  .font-Bellefair {
+    font-family: "Bellefair", serif;
+  }
+}
+
+
+  .menu-icon{
+    display: none;
+  }
+  
+  .line {
+    width: 560px;
+    height: 2px;
+    background-color: #ffff;
+    opacity: 25%;
+  }
+  
+  .blur-bg {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Adds the blur effect */
+  }
+
+  .nav-menu {
+    font-family: "Barlow Condensed", Regular;
+    font-size: 16px;   
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 48px;
+  }
+  .nav-menu ul li a {
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  
+  nav a::after {
+    content: "";
+    width: 0%;
+    background: #fff;
+    display: block;
+    margin: auto;
+    height: 2px;
+    transition: 0.5s;
+    transform: translateY(35px); /* Moves the underline 8px downward */
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+  #destination-list li a::after {
+   transform: translateY(1.3dvh); /* Moves the underline 8px downward */
+
+ } 
+  
+  @media screen and (max-width: 768px) and (max-height: 1024px) {
+    
+    .menu-icon{
+      display: none;
+    }
+    .nav-menu {
+      font-family: "Barlow Condensed", Regular;
+      font-size: 16px;
+      display: flex;
+      justify-content: flex-end;
+      width: 640px;
+      height: 96px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 48px;
+    }
+    .nav-menu ul li a {
+      color: white;
+      cursor: pointer;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+   
+    ul li a::after {
+      content: "";
+      width: 0%;
+      background: #fff;
+      display: block;
+      margin: auto;
+      height: 2px;
+      transition: 0.5s;
+      transform: translateY(5.8dvh); /* Moves the underline 8px downward */
+    }
+    ul li a:hover::after {
+      width: 100%;
+    }
+    #destination-list li a::after {
+     transform: translateY(1.3dvh); /* Moves the underline 8px downward */
+  
+   }
+
+    .hidden-checkbox {
+        display: none;
+    }
+
+    #destination-moon{
+      width: 300px;
+      height: 300px;
+    }
+    #destination-mars{
+      width: 300px;
+      height: 300px;
+    }
+    #destination-europa{
+      width: 300px;
+      height: 300px;
+    }
+    #destination-titan{
+      width: 300px;
+      height: 300px;
+    }
+    #destination-list{
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      list-style: none;
+    }
+    #destination-list li{
+      font-family: 'Barlow Condensed', Regular;
+      font-size: 16px;
+      letter-spacing: 2.4px;
+    }
+  }
+  @media screen and (max-width: 768px) and (max-height: 1024px){
+    
+  } 
+@media screen and (max-width: 375px) {
+  
+  .menu-icon {
+    display: block;
+    background: none;
+    width: 24px;
+    height: 21px;
+    padding: 0;
+  }
+
+ul li a:hover::after{
+  width: 0;
+}
+}
+
+

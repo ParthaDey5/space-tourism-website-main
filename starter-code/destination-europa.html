@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Barlow+Condensed:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <Link href="/starter-code/style.css" rel="stylesheet"></Link>
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body class="overflow-x-hidden text-white flex flex-col justify-start min-h-screen 
+bg-[url('./assets/destination/background-destination-desktop.jpg')] sm:bg-[url('./assets/destination/background-destination-tablet.jpg')] lg:bg-[url('./assets/destination/background-destination-mobile.jpg')] bg-cover bg-no-repeat bg-fixed lg:h-[1024px] !w-auto">
+  <header class="lg:h-[136px] sm:h-[96px] h-[88px] flex justify-between lg:items-end items-center lg:!px-[64px] sm:!px-[40px] !px-[24px] sm:!py-0 !py-[24px]">
+    <div class="!m-0 lg:!mb-3 !w-full xl:!max-w-[736px] lg:max-w-[450px] sm:max-w-[100px] max-w-[100px] flex items-center justify-between">
+      <img class="!p-0 w-16 sm:w-[48px] xl:w-[64px] lg:w-[58px] w-[40px]" src="/starter-code/assets/shared/logo.svg" alt="logo">
+      <div class="lg:block line hidden w-full xl:max-w-[560px] lg:max-w-[340px]"></div>
+    </div>
+    
+    <nav id="navigation" class="hidden text-white w-full lg:h-[96px] sm:flex justify-end items-center xl:gap-[48px] lg:gap-[30px] sm:gap-[48px] sm:gap-[30px] text-[16px] font-Barlow_Condensed xl:tracking-[2px] tracking-[1px]">
+      <a href="/starter-code/index.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">00</span> HOME</a>
+      <a href="/starter-code/destination-moon.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">01</span> DESTINATION</a>
+      <a href="/starter-code/crew-commander.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">02</span> CREW</a>
+      <a href="/starter-code/technology-vehicle.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">03</span> TECHNOLOGY</a>
+    </nav>
+  
+    
+    <button class="lg:hidden sm:hidden z-10">
+      <img id="toggle_icon1" class="!p-0" src="/starter-code/assets/shared/icon-hamburger.svg" alt="Menu" onclick="toggle1()" style="display: block;">
+      <img id="toggle_icon2" class="!p-0" src="/starter-code/assets/shared/icon-close.svg" alt="Menu" onclick="toggle2()" style="display: none;">
+    </button>
+  </header>
+
+  <section class="w-full flex flex-col flex-grow lg:!justify-center !justify-start !items-center lg:!pt-0 sm:!pt-[40px] !pt-[24px]">
+    <div class="flex flex-col w-full xl:max-w-[1110px] lg:max-w-[870px] sm:max-w-[688px] sm:!px-0 !px-[24px] lg:items-start sm:items-start items-center gap-[24px] lg:gap-[22px]">
+    <div class="font-Barlow_Condensed text-white xl:text-[28px] lg:text-[26px] flex gap-[24px]">
+      <p class="tracking-[4.72px] opacity-[25%]">01</p>
+      <p class="tracking-[4px]">PICK YOUR DESTINATION</p>
+    </div>
+    <div class="max-w-[1110px] flex !mx-auto lg:flex-row flex-col items-center justify-between xl:gap-[64px] lg:gap-[44px] gap-[32px]">
+      <div class="max-w-[600px] flex items-center justify-center">
+        <img id="destination-europa" alt="Destination Image" class="!h-auto w-full xl:max-w-[480px] lg:max-w-[380px] sm:max-w-[300px] max-w-[150px]">
+      </div>
+      <div class="w-full xl:max-w-[600px] lg:max-w-[460px] sm:max-w-[514px] flex flex-col justify-between">
+        <nav class="lg:text-left text-center">
+          <ul id="destination-list" class="flex lg:gap-[40px] gap-[32px] text-[14px] tracking-[2.1px]"></ul>
+        </nav>
+        <h1 class="text-white font-Bellefair xl:text-[100px] lg:text-[96px] sm:text-[80px] text-[56px] flex lg:justify-start sm:!justify-center !mb-[16px]">EUROPA</h1>
+        <p id="Frame_20" class="font-Barlow xl:text-[18px] lg:text-[14px] text-[16px] lg:text-left text-center leading-[180%] text-[#D0D6F9]"></p>
+        <div class="xl:!mt-[80px] lg:!mt-[40px] !mt-[48px] flex justify-between">
+          <div class="w-full flex sm:flex-row flex-col sm:justify-between">
+            <div class="w-full xl:max-w-[210.5px] sm:max-w-[245px] flex flex-col lg:items-start items-center gap-[12px]">
+              <p class="text-[#D0D6F9] text-[14px] tracking-[2.1px] font-Barlow_Condensed">AVG. DISTANCE</p>
+              <div id="Frame_22_2" class="text-[28px] text-white font-Bellefair"></div>
+            </div>
+            <div class="w-full xl:max-w-[210.5px] sm:max-w-[245px] flex flex-col lg:items-start items-center gap-[12px]">
+              <p id="Frame_23_1" class="text-[#D0D6F9] text-[14px] tracking-[2.1px]  font-Barlow_Condensed">EST. TRAVEL TIME</p>
+              <div id="Frame_23_2" class="text-[28px] text-white font-Bellefair"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <script>
+    fetch('/starter-code/data.json').then(response=>response.json()).then(data=>{
+      const europaData=data.destinations.find(dest=>dest.name==='Europa');
+      document.getElementById('destination-europa').src = europaData.images.png;
+      
+      const destinationList = document.getElementById('destination-list');
+      destinationList.innerHTML= data.destinations.map(dest=>`<li><a class="dest_loc" href="/starter-code/destination-${dest.name.toLowerCase()}.html">${dest.name.toUpperCase()}</a></li>`).join('');
+      const destLocations = document.querySelectorAll(".dest_loc");
+    console.log(window.location.href);
+  destLocations.forEach(link => {
+    if (link.href === window.location.href) {
+      link.style.color = "white"; 
+    } else {
+      link.style.color = "#D0D6F9"; 
+    }
+  })
+
+      document.getElementById('Frame_20').innerHTML=europaData.description;
+      document.getElementById('Frame_22_2').innerHTML=europaData.distance.toUpperCase();
+      document.getElementById('Frame_23_2').innerHTML=europaData.travel.toUpperCase();
+      document.getElementById('Frame_23_1').innerText=document.getElementById('Frame_23_1').innerText.toUpperCase();
+    }).catch(error=>console.log(error))
+   
+    function toggle1() {
+    const toggle_icon1 = document.getElementById('toggle_icon1')
+    const toggle_icon2=document.getElementById('toggle_icon2')
+    if (toggle_icon1.style.display==='block') {
+      toggle_icon1.style.display='none'
+      toggle_icon2.style.display='block'      
+    }
+    const ToggleMenus= document.createElement("div")
+    ToggleMenus.classList.add("bg-[#0B0D17]/15", "backdrop-blur-2xl", "text-white", "w-[254px]", "h-[812px]", "!absolute", "!right-0", "pl-[32px]");
+    ToggleMenus.id= "dropMenus"
+    ToggleMenus.innerHTML= `<span class="!pl-[32px] !pt-[133px] flex flex-col flex-wrap items-start gap-[32px] text-md font-Barlow_Condensed tracking-[2px]">
+        <a href="/starter-code/index.html"><span class="font-bold tracking-[2.7px]">00</span> HOME</a>
+        <a href="/starter-code/destination-moon.html"><span class="font-bold tracking-[2.7px]">01</span> DESTINATION</a>
+        <a href="/starter-code/crew-commander.html"><span class="font-bold tracking-[2.7px]">02</span> CREW</a>
+        <a href="/starter-code/technology-vehicle.html"><span class="font-bold tracking-[2.7px]">03</span> TECHNOLOGY</a>
+      </span>`
+    document.body.appendChild(ToggleMenus)
+  }
+  
+  function toggle2() {
+    const toggle_icon1 = document.getElementById('toggle_icon1')
+    const toggle_icon2=document.getElementById('toggle_icon2')
+    if (toggle_icon2.style.display==='block') {
+      toggle_icon2.style.display='none'
+      toggle_icon1.style.display='block'
+    }
+    const ToggleMenus= document.getElementById("dropMenus")
+    document.body.removeChild(ToggleMenus)
+    }
+  </script>
+</body>
+</html>
