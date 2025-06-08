@@ -78,7 +78,7 @@ bg-[url('/space-tourism-website-main/assets/crew/background-crew-mobile.jpg')] s
         
         
     <script>
-      fetch("/data.json").then(response=>response.json()).then(data=>{
+      fetch("/space-tourism-website-main/data.json").then(response=>response.json()).then(data=>{
         const DouglasData= data.crew.find(crewData=>crewData.name="Douglas Hurley")
         document.getElementById("Frame_26_1_1_1_1").innerHTML=DouglasData.role.toUpperCase();
         document.getElementById("Frame_26_1_1_1_2").innerHTML=DouglasData.name.toUpperCase();
