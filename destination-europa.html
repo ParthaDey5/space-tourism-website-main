@@ -77,7 +77,7 @@ bg-[url('/space-tourism-website-main/assets/destination/background-destination-d
       document.getElementById('destination-europa').src = europaData.images.png;
       
       const destinationList = document.getElementById('destination-list');
-      destinationList.innerHTML= data.destinations.map(dest=>`<li><a class="dest_loc" href="/destination-${dest.name.toLowerCase()}.html">${dest.name.toUpperCase()}</a></li>`).join('');
+      destinationList.innerHTML= data.destinations.map(dest=>`<li><a class="dest_loc" href="/space-tourism-website-main/destination-${dest.name.toLowerCase()}.html">${dest.name.toUpperCase()}</a></li>`).join('');
       const destLocations = document.querySelectorAll(".dest_loc");
     console.log(window.location.href);
   destLocations.forEach(link => {
