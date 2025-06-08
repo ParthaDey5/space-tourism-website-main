@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/space-tourism-website-main/assets/favicon-32x32.png">
   <link
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Barlow+Condensed:wght@300;600&display=swap"
       rel="stylesheet"
@@ -34,8 +34,8 @@ bg-[url('./assets/destination/background-destination-desktop.jpg')] sm:bg-[url('
   
     
     <button class="lg:hidden sm:hidden z-10">
-      <img id="toggle_icon1" class="!p-0" src="/assets/shared/icon-hamburger.svg" alt="Menu" onclick="toggle1()" style="display: block;">
-      <img id="toggle_icon2" class="!p-0" src="/assets/shared/icon-close.svg" alt="Menu" onclick="toggle2()" style="display: none;">
+      <img id="toggle_icon1" class="!p-0" src="/space-tourism-website-main/assets/shared/icon-hamburger.svg" alt="Menu" onclick="toggle1()" style="display: block;">
+      <img id="toggle_icon2" class="!p-0" src="/space-tourism-website-main/assets/shared/icon-close.svg" alt="Menu" onclick="toggle2()" style="display: none;">
     </button>
   </header>
 
@@ -72,7 +72,7 @@ bg-[url('./assets/destination/background-destination-desktop.jpg')] sm:bg-[url('
   </div>
   </section>
   <script>
-    fetch('/data.json').then(response=>response.json()).then(data=>{
+    fetch('/space-tourism-website-main/data.json').then(response=>response.json()).then(data=>{
       const europaData=data.destinations.find(dest=>dest.name==='Europa');
       document.getElementById('destination-europa').src = europaData.images.png;
       
@@ -105,10 +105,10 @@ bg-[url('./assets/destination/background-destination-desktop.jpg')] sm:bg-[url('
     ToggleMenus.classList.add("bg-[#0B0D17]/15", "backdrop-blur-2xl", "text-white", "w-[254px]", "h-[812px]", "!absolute", "!right-0", "pl-[32px]");
     ToggleMenus.id= "dropMenus"
     ToggleMenus.innerHTML= `<span class="!pl-[32px] !pt-[133px] flex flex-col flex-wrap items-start gap-[32px] text-md font-Barlow_Condensed tracking-[2px]">
-        <a href="/index.html"><span class="font-bold tracking-[2.7px]">00</span> HOME</a>
-        <a href="/destination-moon.html"><span class="font-bold tracking-[2.7px]">01</span> DESTINATION</a>
-        <a href="/crew-commander.html"><span class="font-bold tracking-[2.7px]">02</span> CREW</a>
-        <a href="/technology-vehicle.html"><span class="font-bold tracking-[2.7px]">03</span> TECHNOLOGY</a>
+        <a href="/space-tourism-website-main/index.html"><span class="font-bold tracking-[2.7px]">00</span> HOME</a>
+        <a href="/space-tourism-website-main/destination-moon.html"><span class="font-bold tracking-[2.7px]">01</span> DESTINATION</a>
+        <a href="/space-tourism-website-main/crew-commander.html"><span class="font-bold tracking-[2.7px]">02</span> CREW</a>
+        <a href="/space-tourism-website-main/technology-vehicle.html"><span class="font-bold tracking-[2.7px]">03</span> TECHNOLOGY</a>
       </span>`
     document.body.appendChild(ToggleMenus)
   }
