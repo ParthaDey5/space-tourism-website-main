@@ -77,7 +77,7 @@ bg-[url('/space-tourism-website-main/assets/crew/background-crew-mobile.jpg')] s
           </div>
 
     <script>
-      fetch("/data.json").then(response=>response.json()).then(data=>{
+      fetch("/space-tourism-website-main/data.json").then(response=>response.json()).then(data=>{
         const markData= data.crew[1]
         console.log(markData);
         document.getElementById("Frame_26_1_1_1_1").innerHTML=markData.role.toUpperCase();
