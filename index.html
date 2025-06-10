@@ -103,7 +103,7 @@
       link.addEventListener("click", function(event) {
         event.preventDefault(); // Stop default reload
         const page = this.getAttribute("data-page");
-        fetch(`/${page}.html`)
+        fetch(`/space-tourism-website-main/${page}.html`)
           .then(response => response.text())
           .then(data => {
             document.getElementById("content").innerHTML = data;
