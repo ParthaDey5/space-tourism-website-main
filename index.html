@@ -28,10 +28,10 @@
     </div>
     
     <nav id="navigation" class="hidden text-white w-full lg:h-[96px] sm:flex justify-end items-center xl:gap-[48px] lg:gap-[30px] sm:gap-[48px] sm:gap-[30px] text-[16px] font-Barlow_Condensed xl:tracking-[2px] tracking-[1px] blur-bg">
-      <a href="/space-tourism-website-main/index.html" data-page="home"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">00</span> HOME</a>
-      <a href="/space-tourism-website-main/destination-moon.html" data-page="destination"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">01</span> DESTINATION</a>
-      <a href="/space-tourism-website-main/crew-commander.html" data-page="crew"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">02</span> CREW</a>
-      <a href="/space-tourism-website-main/technology-vehicle.html" data-page="technology"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">03</span> TECHNOLOGY</a>
+      <a href="/space-tourism-website-main/index.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">00</span> HOME</a>
+      <a href="/space-tourism-website-main/destination-moon.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">01</span> DESTINATION</a>
+      <a href="/space-tourism-website-main/crew-commander.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">02</span> CREW</a>
+      <a href="/space-tourism-website-main/technology-vehicle.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">03</span> TECHNOLOGY</a>
     </nav>
   
     
@@ -41,9 +41,7 @@
     </button>
   </header>
 
- 
-<!-- Main Content -->
-  <main id="content">
+  <!-- Hero Section -->
   <section class="w-full h-auto flex flex-col items-center justify-center text-center px-6 py-16 flex-grow sm:px-[40px] sm:py-[96px] xl:max-w-[1440px] lg:m-auto lg:p-0 lg:flex-row lg:justify-center lg:gap-4 sm:items-center sm:justify-center">
     <div class="!mt-[24px] lg:!mt-0 w-full xl:mx-40 lg:mx-35 lg:h-auto lg:max-w-[1440px] flex flex-grow lg:flex-row lg:items-center lg:justify-between sm:flex-col sm:w-full sm:justify-center sm:items-center sm:gap-[100px] gap-[9.7dvh] items-center justify-start flex-col">
       <div class="w-full sm:p-0 !px-7 max-w-[327px] lg:max-w-135 sm:max-w-[512px] lg:max-w-[500px] xl:max-w-[540px]">
@@ -68,7 +66,6 @@
     </div>
     
   </section>
-</main>
 <script>
   function toggle1() {
     const toggle_icon1 = document.getElementById('toggle_icon1')
@@ -99,38 +96,7 @@
     const ToggleMenus= document.getElementById("dropMenus")
     document.body.removeChild(ToggleMenus)
     }
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(event) {
-        event.preventDefault(); // Stop default reload
-        const page = this.getAttribute("data-page");
-        window.location.hash = page; // Update URL using hash
-        loadPage(page); // Load content dynamically
-    });
-});
-
-function loadPage(page) {
-    fetch(`space-tourism-website-main/${page}.html`)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("content").innerHTML = data;
-        })
-        .catch(error => console.error("Error loading page:", error));
-}
-
-// Load correct page on refresh
-window.addEventListener("load", () => {
-    const page = window.location.hash.substring(1) || "home"; // Default to home
-    loadPage(page);
-});
-
-    // Handle back/forward navigation
-    window.addEventListener("popstate", function() {
-      const path = location.pathname.split("/").pop();
-      fetch(path)
-        .then(response => response.text())
-        .then(data => document.getElementById("content").innerHTML = data)
-        .catch(error => console.error("Error loading page:", error));
-    });
+        
 </script>
 </body>
 
