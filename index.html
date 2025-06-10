@@ -99,19 +99,29 @@
     const ToggleMenus= document.getElementById("dropMenus")
     document.body.removeChild(ToggleMenus)
     }
-        document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", function(event) {
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(event) {
         event.preventDefault(); // Stop default reload
         const page = this.getAttribute("data-page");
-        fetch(`${window.location.origin}/${page}.html`)
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("content").innerHTML = data;
-            window.history.pushState({}, "", `/${page}.html`);
-          })
-          .catch(error => console.error("Error loading page:", error));
-      });
+        window.location.hash = page; // Update URL using hash
+        loadPage(page); // Load content dynamically
     });
+});
+
+function loadPage(page) {
+    fetch(`space-tourism-website-main/${page}.html`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("content").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading page:", error));
+}
+
+// Load correct page on refresh
+window.addEventListener("load", () => {
+    const page = window.location.hash.substring(1) || "home"; // Default to home
+    loadPage(page);
+});
 
     // Handle back/forward navigation
     window.addEventListener("popstate", function() {
