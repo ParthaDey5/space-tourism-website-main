@@ -25,24 +25,27 @@
   </head>
   <body class="overflow-x-hidden text-white flex flex-col justify-start min-h-screen 
 bg-[url('/space-tourism-website-main/assets/crew/background-crew-mobile.jpg')] sm:bg-[url('/space-tourism-website-main/assets/crew/background-crew-tablet.jpg')] lg:bg-[url('/space-tourism-website-main/assets/crew/background-crew-desktop.jpg')] bg-cover bg-no-repeat bg-fixed lg:h-[1024px] !w-auto">
-<header class="lg:h-[136px] sm:h-[96px] h-[88px] flex justify-between lg:items-end items-center lg:!px-[64px] sm:!px-[40px] !px-[24px] sm:!py-0 !py-[24px]">
-  <div class="!m-0 lg:!mb-3 !w-full xl:!max-w-[736px] lg:max-w-[450px] sm:max-w-[100px] max-w-[100px] flex items-center justify-between">
-    <img class="!p-0 w-16 sm:w-[48px] xl:w-[64px] lg:w-[58px] w-[40px]" src="/space-tourism-website-main/assets/shared/logo.svg" alt="logo">
-    <div class="lg:block line hidden w-full xl:max-w-[560px] lg:max-w-[340px]"></div>
-  </div>
-  
-    <nav id="navigation" class="hidden text-white w-full lg:h-[96px] sm:flex justify-end items-center xl:gap-[48px] lg:gap-[30px] sm:gap-[48px] sm:gap-[30px] text-[16px] font-Barlow_Condensed xl:tracking-[2px] tracking-[1px]">
+<!-- Navigation -->
+  <header class="lg:h-[136px] sm:h-[96px] h-[88px] flex justify-between lg:items-end items-center lg:!px-[64px] sm:!px-[40px] !px-[24px]">
+    <div class="!m-0 lg:!mb-3 !w-full sm:max-w-[40dvw] max-w-[100px] flex items-center justify-between">
+      <img class="!p-0 w-16 sm:w-[48px] xl:w-[64px] lg:w-[58px] w-[40px]" src="/space-tourism-website-main/assets/shared/logo.svg" alt="logo">
+      <div class="lg:block line hidden w-full xl:max-w-[560px] lg:max-w-[340px]"></div>
+    </div>
+    
+    <nav id="navigation" class="hidden text-white w-full lg:h-[96px] sm:flex justify-start pl-[10dvw] items-center xl:gap-[48px] lg:gap-[30px] sm:gap-[48px] sm:gap-[30px] text-[16px] font-Barlow_Condensed xl:tracking-[2px] tracking-[1px] blur-bg">
       <a href="/space-tourism-website-main/index.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">00</span> HOME</a>
       <a href="/space-tourism-website-main/destination-moon.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">01</span> DESTINATION</a>
       <a href="/space-tourism-website-main/crew-commander.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">02</span> CREW</a>
       <a href="/space-tourism-website-main/technology-vehicle.html"><span class="font-bold xl:tracking-[2.7px] tracking-[1.7px]">03</span> TECHNOLOGY</a>
     </nav>
   
-  <button class="lg:hidden sm:hidden z-10">
-    <img id="toggle_icon1" class="!p-0" src="/space-tourism-website-main/assets/shared/icon-hamburger.svg" alt="Menu" onclick="toggle1()" style="display: block;">
-    <img id="toggle_icon2" class="!p-0" src="/space-tourism-website-main/assets/shared/icon-close.svg" alt="Menu" onclick="toggle2()" style="display: none;">
-  </button>
-</header>
+    
+    <button class="lg:hidden sm:hidden z-10">
+      <img id="toggle_icon1" class="!p-0" src="/space-tourism-website-main/assets/shared/icon-hamburger.svg" alt="Menu" onclick="toggle1()" style="display: block;">
+      <img id="toggle_icon2" class="!p-0" src="/space-tourism-website-main/assets/shared/icon-close.svg" alt="Menu" onclick="toggle2()" style="display: none;">
+    </button>
+  </header>
+
 
       <section class="w-full flex flex-col flex-grow lg:!justify-center !justify-start !items-center lg:!pt-0 sm:!pt-[40px] !pt-[24px]">
         <div class="flex flex-col w-full !flex-grow lg:py-[48px] xl:max-w-[1110px] lg:max-w-[870px] sm:max-w-[688px] sm:!px-0 !px-[24px] lg:items-start sm:items-start items-center gap-[24px] lg:gap-[22px]">
