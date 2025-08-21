@@ -2,6 +2,9 @@
 
 
 @layer base {
+  nav a {
+    text-wrap: nowrap;
+  }
   @font-face {
     font-family: "Barlow";
     src: url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap");
